@@ -9,7 +9,7 @@ public class Ejercicio5 {
     public static void main (String[] args){
         List<Alumno> listaAlumnos = cargarLista();
         Map<String, Integer> mapAlumnos = listaAlumnos.stream()
-            .collect(Collectors.toMap(alumno -> alumno.nombre + alumno.apellido, 
+            .collect(Collectors.toMap(alumno -> alumno.nombre + " " + alumno.apellido, 
                 alumno -> Period.between(alumno.fechaDeNacimiento, LocalDate.now())
                 .getYears()));
 
