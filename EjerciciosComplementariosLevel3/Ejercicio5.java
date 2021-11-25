@@ -8,11 +8,14 @@ import java.time.Period;
 public class Ejercicio5 {
     public static void main (String[] args){
         List<Alumno> listaAlumnos = cargarLista();
-        Map<String,Integer> mapAlumnos = listaAlumnos.stream()
+        Map<String, Integer> mapAlumnos = listaAlumnos.stream()
             .collect(Collectors.toMap(alumno -> alumno.nombre + alumno.apellido, 
                 alumno -> Period.between(alumno.fechaDeNacimiento, LocalDate.now())
                 .getYears()));
-        System.out.println(mapAlumnos);
+
+        for (Map.Entry<String, Integer> alumno : mapAlumnos.entrySet()) {
+            System.out.println(alumno.getKey() + " tiene " + alumno.getValue() + " años");
+        }
     }
 
     public static List<Alumno> cargarLista(){
