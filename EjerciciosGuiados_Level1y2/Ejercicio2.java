@@ -1,4 +1,4 @@
-package EjerciciosGuiados;
+package EjerciciosGuiados_Level1y2;
 import java.util.*;
 
 ;public class Ejercicio2 {

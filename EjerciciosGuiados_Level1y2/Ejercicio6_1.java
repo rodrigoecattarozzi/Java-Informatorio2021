@@ -1,4 +1,4 @@
-package EjerciciosGuiados;
+package EjerciciosGuiados_Level1y2;
 import java.util.Scanner;
 
 public class Ejercicio6_1 {
